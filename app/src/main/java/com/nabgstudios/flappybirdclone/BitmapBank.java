@@ -35,7 +35,10 @@ public class BitmapBank {
         return background.getHeight();
     }
 
-    // method to fit the background to screen
+    /**
+     *  method to fit the background to screen
+     */
+
     public Bitmap scaleImage(Bitmap bitmap){
         float widthHeightRatio = getBackgroundWidth() / getBackgroundHeight();
         /**
