@@ -7,7 +7,7 @@ public class BackgroundImage {
     public BackgroundImage() {
         backgroundImageX = 0;
         backgroundImageY = 0;
-        backgroundImageVelocity = 3;
+        backgroundImageVelocity = 10;
     }
 
     // Getter method for getting the X-coordinate
