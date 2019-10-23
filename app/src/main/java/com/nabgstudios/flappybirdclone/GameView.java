@@ -24,7 +24,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
             gameThread = new GameThread(surfaceHolder);
             gameThread.start();
         }else{
-
+            gameThread.start();
         }
     }
 
@@ -36,6 +36,18 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     @Override
     public void surfaceDestroyed(SurfaceHolder surfaceHolder) {
 
+        if(gameThread.isRunning()){
+            gameThread.setIsRunning(false);
+            boolean retry = true;
+            while(retry){
+                try{
+                    gameThread.join();
+                    retry = false;
+                }catch (InterruptedException e){
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
     private void initView() {
