@@ -9,13 +9,12 @@
     >
 
     <ImageButton
+        android:layout_centerInParent="true"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
         android:id="@+id/imageButtonPlay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/holo_red_dark"
-        android:background="@drawable/rightplay" />
+        android:background="@drawable/play" />
 
     <TextView
         android:layout_centerHorizontal="true"
@@ -24,8 +23,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageButtonPlay"
-        android:layout_marginBottom="192dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="150dp"
         android:textColor="@android:color/holo_red_dark"
         android:text="Flappy Bird" />
 </RelativeLayout>
